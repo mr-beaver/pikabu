@@ -1,0 +1,9 @@
+Bestbuy:
+
+condition: response.css('.list-item').re('data-condition="(.[^"]*)')
+
+name: response.css('.list-item').re('data-name="(.[^"]*)')
+
+price: response.css('.list-item').re('data-price="(.[^"]*)')
+
+model: response.css('[itemprop="model"]::text').extract()
